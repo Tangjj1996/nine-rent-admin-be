@@ -1,11 +1,15 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
+import { createFactory } from 'hono/factory'
 
 const app = new Hono()
+const factory = createFactory()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
+const handlers = factory.createHandlers(c => {
+  return c.json({ name: 'gujianjie' })
 })
+
+app.get('/api/schema', ...handlers)
 
 const port = 3000
 console.log(`Server is running on port ${port}`)
