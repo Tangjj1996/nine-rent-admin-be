@@ -1,7 +1,6 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { createFactory } from 'hono/factory'
-import { eq } from 'drizzle-orm'
 import { db } from './db'
 import { userTable } from './db/schema'
 
