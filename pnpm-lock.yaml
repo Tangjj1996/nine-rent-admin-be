@@ -8,6 +8,9 @@ dependencies:
   '@hono/node-server':
     specifier: ^1.13.1
     version: 1.13.1(hono@4.6.3)
+  '@hono/zod-validator':
+    specifier: ^0.4.1
+    version: 0.4.1(hono@4.6.3)(zod@3.23.8)
   dotenv:
     specifier: ^16.4.5
     version: 16.4.5
@@ -20,6 +23,9 @@ dependencies:
   mysql2:
     specifier: ^3.11.4
     version: 3.11.4
+  zod:
+    specifier: ^3.23.8
+    version: 3.23.8
 
 devDependencies:
   '@types/node':
@@ -684,6 +690,16 @@ packages:
       hono: 4.6.3
     dev: false
 
+  /@hono/zod-validator@0.4.1(hono@4.6.3)(zod@3.23.8):
+    resolution: {integrity: sha512-I8LyfeJfvVmC5hPjZ2Iij7RjexlgSBT7QJudZ4JvNPLxn0JQ3sqclz2zydlwISAnw21D2n4LQ0nfZdoiv9fQQA==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
+    dependencies:
+      hono: 4.6.3
+      zod: 3.23.8
+    dev: false
+
   /@types/node@20.16.10:
     resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
     dependencies:
@@ -1051,3 +1067,7 @@ packages:
   /undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
     dev: true
+
+  /zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+    dev: false
