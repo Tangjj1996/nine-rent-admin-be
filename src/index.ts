@@ -1,6 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { createFactory } from 'hono/factory'
+import { db } from './db'
 
 const app = new Hono()
 const factory = createFactory()
