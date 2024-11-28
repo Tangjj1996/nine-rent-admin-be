@@ -15,6 +15,6 @@ export const house = t.mysqlTable('house', {
   like_count: t.int().notNull().$default(() => 0),
   collection_count: t.int().notNull().$default(() => 0),
   house_info_id: t.int().references(() => houseInfo.id),
-  conver: t.text().notNull(),
+  cover: t.text().notNull(),
   swiper: t.text().notNull()
 })

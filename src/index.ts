@@ -2,13 +2,13 @@ import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { createFactory } from 'hono/factory'
 import { db } from './db'
-import { userTable } from './db/schema'
+import { house } from './db/schema'
 
 const app = new Hono()
 const factory = createFactory()
 
 const handlers = factory.createHandlers(async c => {
-  const users = await db.select().from(userTable)
+  const users = await db.select().from(house)
 
   return c.json({ msg: 'ok', data: users })
 })
